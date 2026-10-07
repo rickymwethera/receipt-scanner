@@ -2,7 +2,8 @@ import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { Spacing } from "@/constants/theme";
 import { mockReceipts } from "@/data/mock-receipts";
-import { FlatList, StyleSheet } from "react-native";
+import { Link } from "expo-router";
+import { FlatList, Pressable, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const sorted = [...mockReceipts].sort((a, b) => b.date.localeCompare(a.date));
@@ -16,17 +17,24 @@ export default function ReceiptsScreen() {
           data={sorted}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <ThemedView type="backgroundElement" style={styles.card}>
-              <ThemedView type="backgroundElement" style={styles.cardLeft}>
-                <ThemedText type="smallBold" numberOfLines={1}>
-                  {item.merchant}
-                </ThemedText>
-                <ThemedText type="small" themeColor="textSecondary">
-                  {item.date}
-                </ThemedText>
-              </ThemedView>
-              <ThemedText>{item.total.toFixed(2)}</ThemedText>
-            </ThemedView>
+            <Link
+              href={{ pathname: "/receipt/[id]", params: { id: item.id } }}
+              asChild
+            >
+              <Pressable>
+                <ThemedView type="backgroundElement" style={styles.card}>
+                  <ThemedView type="backgroundElement" style={styles.cardLeft}>
+                    <ThemedText type="smallBold" numberOfLines={1}>
+                      {item.merchant}
+                    </ThemedText>
+                    <ThemedText type="small" themeColor="textSecondary">
+                      {item.date}
+                    </ThemedText>
+                  </ThemedView>
+                  <ThemedText>{item.total.toFixed(2)}</ThemedText>
+                </ThemedView>
+              </Pressable>
+            </Link>
           )}
           ListEmptyComponent={
             <ThemedText themeColor="textSecondary">

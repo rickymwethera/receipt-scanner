@@ -4,7 +4,7 @@ export const mockReceipts: Receipt[] = [
   {
     id: "1",
     date: "2023-06-01",
-    merchant: "Carrefour Hyper Westgate Mall Branch",
+    merchant: "Carrefour Supermarket",
     items: [
       { name: "Milk", quantity: 2, price: 3.5 },
       { name: "Bread", quantity: 1, price: 2.0 },
