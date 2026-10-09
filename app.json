@@ -33,6 +33,20 @@
           "imageWidth": 76
         }
       ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow access to your camera to scan receipts."
+        }
+      ],
+      ["react-native-vision-camera", {}],
+      [
+        "react-native-vision-camera-mlkit",
+        {
+          "textRecognition": true,
+          "barcodeScanning": false
+        }
+      ],
       "expo-sqlite"
     ],
     "experiments": {
