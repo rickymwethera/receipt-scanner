@@ -11,5 +11,5 @@ export type Receipt = {
   items: ReceiptItem[];
   tax: number;
   total: number;
-  imageUrl: string;
+  imageUri: string;
 };

@@ -11,7 +11,7 @@ export const mockReceipts: Receipt[] = [
     ],
     tax: 0.5,
     total: 9.5,
-    imageUrl: "https://example.com/receipt1.jpg",
+    imageUri: "https://example.com/receipt1.jpg",
   },
   {
     id: "2",
@@ -23,6 +23,6 @@ export const mockReceipts: Receipt[] = [
     ],
     tax: 0.6,
     total: 7.1,
-    imageUrl: "https://example.com/receipt2.jpg",
+    imageUri: "https://example.com/receipt2.jpg",
   },
 ];

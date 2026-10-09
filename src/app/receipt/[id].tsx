@@ -29,9 +29,11 @@ export default function ReceiptDetailScreen() {
         {receipt.items.map((item) => (
           <ThemedView key={item.name} style={styles.row}>
             <ThemedText>
-              {item.quantity} x {item.name}{" "}
+              {item.quantity} x {item.name}
             </ThemedText>
             <ThemedText>${(item.price * item.quantity).toFixed(2)}</ThemedText>
+            <ThemedText>{receipt.tax}</ThemedText>
+            <ThemedText>${receipt.total.toFixed(2)}</ThemedText>
           </ThemedView>
         ))}
       </ScrollView>
