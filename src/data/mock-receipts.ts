@@ -11,7 +11,7 @@ export const mockReceipts: Receipt[] = [
     ],
     tax: 0.5,
     total: 9.5,
-    imageUri: "https://www.dreamstime.com/illustration/receipt-template.html",
+    imageUri: "https://picsum.photos/seed/receipt/600/900",
   },
   {
     id: "2",

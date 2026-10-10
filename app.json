@@ -39,7 +39,7 @@
           "cameraPermission": "Allow access to your camera to scan receipts."
         }
       ],
-      ["react-native-vision-camera", {}],
+
       [
         "react-native-vision-camera-mlkit",
         {
