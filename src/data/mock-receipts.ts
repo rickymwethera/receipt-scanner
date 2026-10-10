@@ -5,6 +5,9 @@ export const mockReceipts: Receipt[] = [
     id: "1",
     date: "2023-06-01",
     merchant: "Carrefour Supermarket",
+    status: "needs_review",
+    source: "scan",
+
     items: [
       { name: "Milk", quantity: 2, price: 3.5 },
       { name: "Bread", quantity: 1, price: 2.0 },
@@ -17,6 +20,8 @@ export const mockReceipts: Receipt[] = [
     id: "2",
     date: "2026-06-02",
     merchant: "Naivas Supermarket",
+    status: "needs_review",
+    source: "scan",
     items: [
       { name: "Eggs", quantity: 1, price: 2.5 },
       { name: "Cheese", quantity: 1, price: 4.0 },
