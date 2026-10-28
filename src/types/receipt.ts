@@ -19,14 +19,14 @@ export type Receipt = {
   date: string;
   time?: string;
   location?: string;
-  currency?: string;
+  currency: string;
   items: ReceiptItem[];
   tax: number;
   total: number;
   category?: string;
-  source?: ReceiptSource;
+  source: ReceiptSource;
   paymentMethod?: string;
-  taxDeductable?: boolean;
+  taxDeductible?: boolean;
   notes?: string;
   ocrConfidence?: number;
   imageUri?: string;
